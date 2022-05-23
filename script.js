@@ -11,7 +11,7 @@ function generatePassword() {
   var input = parseInt(prompt("Choose a length between 8 and 128."));
 
   if (input >= 8 && input <= 128) {
-    // GOOD CODE GOES HERE
+    // Coding goes here
   } else {
     alert("Please enter a length between 8 and 128.");
   }
