@@ -8,12 +8,28 @@ function generatePassword() {
   var special = "#$%&()*+,-./:;<=>?";
   var uppercase = lowercase.toUpperCase();
 
+  // Sets password length parameters 
   var input = parseInt(prompt("Choose a length between 8 and 128."));
-
   if (input >= 8 && input <= 128) {
-    // Coding goes here
+    //Returns invalid character length message 
   } else {
     alert("Please enter a length between 8 and 128.");
+  }
+
+  // Checks for special characters
+  var specialChar = confirm("Would you like to use special characters?")
+  if (specialChar) {
+    generatePassword(generate)
+  } else {
+    alert("OK")
+  }
+
+  // Checks for numbers 
+  var numbers = confirm("Would you like to use numbers?")
+  if (numbers === Yes) {
+    generatePassword()
+  } else {
+    alert("Please use either special characters and/or numbers.")
   }
 
   return "";
