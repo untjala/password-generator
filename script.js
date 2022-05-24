@@ -41,11 +41,11 @@ function generatePassword() {
     alert("Please use select one of the choices.");
   }
 
-  for (var i = 0; i < input; i++)
+  for (var i = 0; i < input; i++) {
   var possible= Math.floor(Math.random () * input.length);
-  console.log(possible)
-  
-  return "";
+  //console.log(possible)
+  }
+  //return "";
 }
 // Password generation based on user choices
 // for (var i = 0; i > 8; i++)
