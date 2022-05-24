@@ -9,6 +9,7 @@ function generatePassword() {
   var uppercase = lowercase.toUpperCase();
   var possible = "";
 
+  
   // Sets password length parameters 
   var input = parseInt(prompt("Choose a length between 8 and 128."));
   if (input >= 8 && input <= 128) {
@@ -16,6 +17,7 @@ function generatePassword() {
   } else {
     alert("Please enter a length between 8 and 128.");
   }
+  
 
 
   // Checks for lowercase letters
@@ -39,20 +41,19 @@ function generatePassword() {
   if (useNumbers) {
     possible += numbers
     possible += numbers
-  } else {
-    alert("Please use select one of the choices.");
-  }
-  //PROBLEM AREA
-  //OUTPUTING "your secure password"
+    if (!useLowerCase && !userUpperCase && !userSpecial && !userNumber) {
+      alert("Please use select one of the choices.");
+    }
+}
+  //For statement to loop password
   var passwordBuilt = "";
   console.log(possible);
   for (var i = 0; i < input; i++) {
     passwordBuilt += possible.charAt(Math.floor(Math.random() * possible.length));
   }
   return passwordBuilt;
-  //stopping after lowercase letters test
+
 }
-//thanks so much!!! sorry I can't talk :(
 
 // Write password to the #password input
 function writePassword() {
