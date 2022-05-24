@@ -14,26 +14,41 @@ function generatePassword() {
     //Returns invalid character length message 
   } else {
     alert("Please enter a length between 8 and 128.");
-  }
+    return "";
 
-  // Checks for special characters
-  var specialChar = confirm("Would you like to use special characters?")
-  if (specialChar) {
-    generatePassword(generate)
-  } else {
-    alert("OK")
-  }
+    // Checks for lowercase letters
+    var lowercase = confirm("Would you like to use lowercase letters?");
+    if (lowercase === true) {
 
-  // Checks for numbers 
-  var numbers = confirm("Would you like to use numbers?")
-  if (numbers === Yes) {
-    generatePassword()
-  } else {
-    alert("Please use either special characters and/or numbers.")
+    } else alert("OK")
   }
+  //Checks for uppercase lettters
+  var uppercase = confirm("Would you like to use uppercase letters?");
+  if (uppercase === true) {
 
-  return "";
+  } else alert("OK")
 }
+//Checks for special characters
+console.log(special)
+var special = confirm("Would you like to use special characters?");
+if (special === true) {
+
+} else alert("OK") 
+
+//Checks for numbers
+console.log(numbers)
+var numbers = confirm("Would you like to use numbers?");
+if (numbers === true) {
+
+} else {
+  alert("Please use special characters and or/numbers.");
+};
+// Password generation based on user choices
+// for (var i = 0; i > 8; i++)
+//   var characters = lowercase
+// var pasword = "";
+// var passwordMaker = Math.floor(Math.random() * password.length);
+// console.log(passwordMaker);
 
 // Write password to the #password input
 function writePassword() {
