@@ -9,7 +9,7 @@ function generatePassword() {
   var uppercase = lowercase.toUpperCase();
   var possible = "";
 
-  
+
   // Sets password length parameters 
   var input = parseInt(prompt("Choose a length between 8 and 128."));
   if (input >= 8 && input <= 128) {
@@ -17,17 +17,17 @@ function generatePassword() {
   } else {
     alert("Please enter a length between 8 and 128.");
   }
-  
-
-
+  if (!input >= 8 && !input <= 128) {
+  alert("Please enter a length between 8 and 128.");
+  }
   // Checks for lowercase letters
-  var useLowercase = confirm("Would you like to use lowercase letters?");
-  if (useLowercase) {
+  var useLowerCase = confirm("Would you like to use lowercase letters?");
+  if (useLowerCase) {
     possible += lowercase
   }
   //Checks for uppercase lettters
-  var useUppercase = confirm("Would you like to use uppercase letters?");
-  if (useUppercase) {
+  var useUpperCase = confirm("Would you like to use uppercase letters?");
+  if (useUpperCase) {
     possible += uppercase
   }
   //Checks for special characters
@@ -41,10 +41,11 @@ function generatePassword() {
   if (useNumbers) {
     possible += numbers
     possible += numbers
-    if (!useLowerCase && !userUpperCase && !userSpecial && !userNumber) {
+  }
+
+    if (!useLowerCase && !useUpperCase && !useSpecial && !useNumbers) {
       alert("Please use select one of the choices.");
-    }
-}
+  }
   //For statement to loop password
   var passwordBuilt = "";
   console.log(possible);
