@@ -11,7 +11,7 @@ For this challenge, I built upon starter code to create a password generator. Wh
 If the user does not meet the required length, or does not select at least one element, they are alerted to the error and asked to begin again. After all prompts are answered, a random password based on the user criteria is answered. 
  
  ## Visuals 
- ![Password-Generator](passwordGenerator.gif)
+ ![Password-Generator](Assets/passwordGenerator.gif)
 
  ## Resources 
  * Live Site (https://untjala.github.io/password-generator/)

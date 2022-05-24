@@ -15,10 +15,10 @@ function generatePassword() {
   if (input >= 8 && input <= 128) {
     //Returns invalid character length message 
   } else {
-    alert("Please enter a length between 8 and 128.");  
+    alert("Please enter a length between 8 and 128.");
     return "";
-  
-  
+
+
 
   }
   // Checks for lowercase letters
@@ -44,8 +44,8 @@ function generatePassword() {
     possible += numbers
   }
   //Tells user to choose one of the variables if none have been selected.
-    if (!useLowerCase && !useUpperCase && !useSpecial && !useNumbers) {
-      alert("Please use select one of the choices.");
+  if (!useLowerCase && !useUpperCase && !useSpecial && !useNumbers) {
+    alert("Please use select one of the choices.");
   }
   //For statement to loop password
   var passwordBuilt = "";
