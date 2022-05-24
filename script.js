@@ -19,40 +19,40 @@ function generatePassword() {
 
 
   // Checks for lowercase letters
-  var lowercase = confirm("Would you like to use lowercase letters?");
-  if (lowercase) {
+  var useLowercase = confirm("Would you like to use lowercase letters?");
+  if (useLowercase) {
     possible += lowercase
   }
   //Checks for uppercase lettters
-  var uppercase = confirm("Would you like to use uppercase letters?");
-  if (uppercase) {
+  var useUppercase = confirm("Would you like to use uppercase letters?");
+  if (useUppercase) {
     possible += uppercase
   }
   //Checks for special characters
-  var special = confirm("Would you like to use special characters?");
-  if (special) {
+  var useSpecial = confirm("Would you like to use special characters?");
+  if (useSpecial) {
+    possible += special
     possible += special
   }
   //Checks for numbers
-  var numbers = confirm("Would you like to use numbers?");
-  if (numbers) {
-    possible += special
+  var useNumbers = confirm("Would you like to use numbers?");
+  if (useNumbers) {
+    possible += numbers
+    possible += numbers
   } else {
     alert("Please use select one of the choices.");
   }
-
+  //PROBLEM AREA
+  //OUTPUTING "your secure password"
+  var passwordBuilt = "";
+  console.log(possible);
   for (var i = 0; i < input; i++) {
-  var possible= Math.floor(Math.random () * input.length);
-  //console.log(possible)
+    passwordBuilt += possible.charAt(Math.floor(Math.random() * possible.length));
   }
-  //return "";
+  return passwordBuilt;
+  //stopping after lowercase letters test
 }
-// Password generation based on user choices
-// for (var i = 0; i > 8; i++)
-//   var characters = lowercase
-// var pasword = "";
-// var passwordLength = Math.floor(Math.random() * password.length);
-// console.log(passwordLength);
+//thanks so much!!! sorry I can't talk :(
 
 // Write password to the #password input
 function writePassword() {
